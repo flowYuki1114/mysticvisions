@@ -18,7 +18,7 @@ export function Hero() {
       setCurrentText((prev) => (prev + 1) % texts.length)
     }, 3000)
     return () => clearInterval(interval)
-  }, [])
+  }, [texts.length])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
