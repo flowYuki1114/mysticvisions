@@ -21,13 +21,11 @@ export function Hero() {
   }, [texts.length])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 cosmic-gradient">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-gray-900 opacity-20"></div>
       </div>
 
-      {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <div
@@ -45,7 +43,6 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Main Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-mystical font-bold mb-6">
@@ -77,7 +74,6 @@ export function Hero() {
           </Link>
         </div>
 
-        {/* Trust Indicators */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           <div className="card">
             <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
@@ -103,12 +99,11 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
